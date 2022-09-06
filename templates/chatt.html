@@ -10,7 +10,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
-	var socket = io.connect('https://purplefrogchatt1.herokuapp.com');     // always remember to change this to the right url!
+	var socket = io.connect('https://purplefrogchatt1.herokuapp.com/chatt/');     // always remember to change this to the right url!
 
 	socket.on('connect', function() {
 		socket.send('has connected!');
