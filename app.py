@@ -25,10 +25,10 @@ socketio = SocketIO(app, cors_allowed_origins='*', engineio_logger=True)
 #engine = create_engine("sqlite:///chatt.db")
 
 class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)                                # integral för att holla koll på medelanden
-    message = db.Column(db.String(200), nullable=False)                         # message, kollumn med typen "db.string", längd 200. kan inte ha ett värde av NULL (0, eller ingenting)
-    user = db.Column(db.String(200), nullable=False)                            # user, kollumn med typen "db.string", längd 200. kan inte ha ett värde av NULL (0, eller ingenting)     (db är instans av klassen "SQLAlchemy")
-    date_created = db.Column(db.DateTime, default=datetime.datetime.utcnow)     # date_created, kollumn med typen "db.datetim", längd 200. kan inte ha ett värde av NULL (0, eller ingenting)
+    id = db.Column(db.Integer, primary_key=True)                               
+    message = db.Column(db.String(200), nullable=False)                         
+    user = db.Column(db.String(200), nullable=False)                            
+    date_created = db.Column(db.DateTime, default=datetime.datetime.utcnow)     
 
     def __repr__(self):
         return "<message: %r>" % self.id
